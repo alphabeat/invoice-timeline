@@ -9,7 +9,7 @@ const Invoice = new GraphQLObjectType({
     status: {type: GraphQLString},
     paid_at: {type: GraphQLString},
     due_at: {type: GraphQLString},
-    phone: {type: GraphQLString},
+    customer: {type: GraphQLString},
     created_at: {type: GraphQLString}
   }
 });
