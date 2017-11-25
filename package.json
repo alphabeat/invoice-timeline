@@ -1,15 +1,14 @@
 {
-  "name": "micro-graphql",
+  "name": "invoice-timeline",
   "version": "0.0.0",
-  "description": "micro-graphql",
+  "description": "invoice-timeline grpahql backend",
   "main": "dist/bundle.js",
   "scripts": {
     "start": "yarn run build && micro dist/bundle.js",
     "build": "webpack",
     "watch": "webpack -w"
   },
-  "repository": "https://github.com/hyperfuse/micro-graphql.git",
-  "author": "Kennet Postigo",
+  "author": "Julien Kilo",
   "license": "MIT",
   "dependencies": {
     "express-graphql": "^0.6.1",
