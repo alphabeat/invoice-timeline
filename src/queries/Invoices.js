@@ -1,4 +1,4 @@
-import { GraphQLList } from 'graphql';
+import { GraphQLList, GraphQLString } from 'graphql';
 import Invoice from './../types/InvoiceType.js';
 
 const invoices = [
@@ -14,4 +14,12 @@ const allInvoices = {
   }
 };
 
-export default allInvoices;
+const invoiceDetails = {
+  type: Invoice,
+  args: { reference: { type: GraphQLString, required: true } },
+  resolve: (_ , { reference }) => {
+    return invoices.find(invoice => invoice.reference === reference);
+  }
+};
+
+export { allInvoices, invoiceDetails };
