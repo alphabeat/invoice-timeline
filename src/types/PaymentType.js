@@ -5,10 +5,10 @@ const Payment = new GraphQLObjectType({
   description: 'Payment model',
   fields: {
     reference: {type: GraphQLString},
-    paid_at: {type: GraphQLString},
+    paidAt: {type: GraphQLString},
     method: {type: GraphQLString},
-    wallet_name: {type: GraphQLString},
-    wallet_id: {type: GraphQLString}
+    walletName: {type: GraphQLString},
+    walletId: {type: GraphQLString}
   }
 });
 

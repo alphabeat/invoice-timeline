@@ -9,9 +9,9 @@ const Invoice = new GraphQLObjectType({
     reference: {type: GraphQLString},
     amount: {type: GraphQLFloat},
     status: {type: GraphQLString},
-    due_at: {type: GraphQLString},
+    dueAt: {type: GraphQLString},
     customer: {type: GraphQLString},
-    created_at: {type: GraphQLString},
+    createdAt: {type: GraphQLString},
     payment: {type: Payment},
     comments: {type: new GraphQLList(Comment)}
   }
