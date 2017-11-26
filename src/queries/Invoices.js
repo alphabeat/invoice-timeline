@@ -1,12 +1,18 @@
 const { GraphQLList, GraphQLString } = require('graphql');
 const Invoice = require('./../types/InvoiceType.js');
 const SqlInvoice = require('./../models').Invoice;
+const Payment = require('./../models').Payment;
 
 const allInvoices = {
   type: new GraphQLList(Invoice),
   resolve: () => {
     return SqlInvoice
-      .findAll()
+      .findAll({
+        include: [{
+          model: Payment,
+          as: 'payment',
+        }],
+      })
       .then(results => results.map(result => result.dataValues));
   }
 };
