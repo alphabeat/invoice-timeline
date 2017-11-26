@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLString } from 'graphql';
+const { GraphQLObjectType, GraphQLString } = require('graphql');
 
 const Comment = new GraphQLObjectType({
   name: 'Comment',
@@ -10,4 +10,4 @@ const Comment = new GraphQLObjectType({
   }
 });
 
-export default Comment;
+module.exports = Comment;

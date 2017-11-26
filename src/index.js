@@ -1,7 +1,5 @@
-import micro from 'micro';
-import graphqlHTTP from 'express-graphql';
-import Schema from './schema/schema.js';
-
+const graphqlHTTP = require('express-graphql');
 const CORS = require('micro-cors')();
+const Schema = require('./schema/schema.js');
 
-exports.default = CORS(graphqlHTTP({ schema: Schema, pretty: true, graphiql: true }));
+module.exports = CORS(graphqlHTTP({ schema: Schema }));

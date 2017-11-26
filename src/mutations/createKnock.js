@@ -1,5 +1,5 @@
-import { GraphQLString, GraphQLBoolean } from 'graphql';
-import Knock from './../types/KnockType.js';
+const { GraphQLString, GraphQLBoolean } = require('graphql');
+const Knock = require('./../types/KnockType.js');
 
 const CreateKnock = {
   type: Knock,
@@ -9,4 +9,4 @@ const CreateKnock = {
   },
 };
 
-export default CreateKnock;
+module.exports = CreateKnock;

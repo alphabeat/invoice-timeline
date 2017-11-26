@@ -1,5 +1,5 @@
-import { GraphQLString } from 'graphql';
-import Knock from './../types/KnockType.js';
+const { GraphQLString } = require('graphql');
+const Knock = require('./../types/KnockType.js');
 
 const knockknock = {
   type: Knock,
@@ -9,4 +9,4 @@ const knockknock = {
   },
 };
 
-export default knockknock;
+module.exports = knockknock;

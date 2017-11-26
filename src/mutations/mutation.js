@@ -1,5 +1,5 @@
-import { GraphQLObjectType } from 'graphql';
-import CreateKnock from './createKnock.js';
+const { GraphQLObjectType } = require('graphql');
+const CreateKnock = require('./createKnock.js');
 
 const Mutation = new GraphQLObjectType({
   name: 'Mutation',
@@ -9,4 +9,4 @@ const Mutation = new GraphQLObjectType({
   },
 });
 
-export default Mutation;
+module.exports = Mutation;

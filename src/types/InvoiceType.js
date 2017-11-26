@@ -1,6 +1,6 @@
-import { GraphQLObjectType, GraphQLList, GraphQLString, GraphQLFloat } from 'graphql';
-import Payment from './PaymentType';
-import Comment from './CommentType';
+const { GraphQLObjectType, GraphQLList, GraphQLString, GraphQLFloat } = require('graphql');
+const Payment = require('./PaymentType');
+const Comment = require('./CommentType');
 
 const Invoice = new GraphQLObjectType({
   name: 'Invoice',
@@ -17,4 +17,4 @@ const Invoice = new GraphQLObjectType({
   }
 });
 
-export default Invoice;
+module.exports = Invoice;

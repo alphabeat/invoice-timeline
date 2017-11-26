@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLString } from 'graphql';
+const { GraphQLObjectType, GraphQLString } = require('graphql');
 
 const Hello = new GraphQLObjectType({
   name: 'Hello',
@@ -15,4 +15,4 @@ const Hello = new GraphQLObjectType({
   },
 });
 
-export default Hello;
+module.exports = Hello;

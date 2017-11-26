@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLString } from 'graphql';
+const { GraphQLObjectType, GraphQLString } = require('graphql');
 
 const Knock = new GraphQLObjectType({
   name: 'Knock',
@@ -15,4 +15,4 @@ const Knock = new GraphQLObjectType({
   },
 });
 
-export default Knock;
+module.exports = Knock;

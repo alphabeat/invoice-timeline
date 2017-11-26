@@ -1,5 +1,5 @@
-import { GraphQLString } from 'graphql';
-import Hello from './../types/HelloType.js';
+const { GraphQLString } = require('graphql');
+const Hello = require('./../types/HelloType.js');
 
 const helloworld = {
   type: Hello,
@@ -9,4 +9,4 @@ const helloworld = {
   },
 };
 
-export default helloworld;
+module.exports = helloworld;

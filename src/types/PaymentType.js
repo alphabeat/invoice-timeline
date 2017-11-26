@@ -1,4 +1,4 @@
-import { GraphQLObjectType, GraphQLString, GraphQLFloat } from 'graphql';
+const { GraphQLObjectType, GraphQLString, GraphQLFloat } = require('graphql');
 
 const Payment = new GraphQLObjectType({
   name: 'Payment',
@@ -12,4 +12,4 @@ const Payment = new GraphQLObjectType({
   }
 });
 
-export default Payment;
+module.exports = Payment;

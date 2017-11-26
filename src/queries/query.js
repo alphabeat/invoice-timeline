@@ -1,7 +1,7 @@
-import { GraphQLObjectType } from 'graphql';
-import knockknock from './Knock.js';
-import helloworld from './Hello.js';
-import { allInvoices, invoiceDetails } from './Invoices.js';
+const { GraphQLObjectType } = require('graphql');
+const knockknock = require('./Knock.js');
+const helloworld = require('./Hello.js');
+const { allInvoices, invoiceDetails } = require('./Invoices.js');
 
 const Query = new GraphQLObjectType({
   name: 'Query',
@@ -11,4 +11,4 @@ const Query = new GraphQLObjectType({
   },
 });
 
-export default Query;
+module.exports = Query;

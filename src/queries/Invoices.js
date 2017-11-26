@@ -1,5 +1,5 @@
-import { GraphQLList, GraphQLString } from 'graphql';
-import Invoice from './../types/InvoiceType.js';
+const { GraphQLList, GraphQLString } = require('graphql');
+const Invoice = require('./../types/InvoiceType.js');
 
 const invoices = [
   {
@@ -35,4 +35,4 @@ const invoiceDetails = {
   }
 };
 
-export { allInvoices, invoiceDetails };
+module.exports = { allInvoices, invoiceDetails };
