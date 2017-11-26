@@ -1,5 +1,6 @@
-import { GraphQLObjectType, GraphQLString, GraphQLFloat } from 'graphql';
+import { GraphQLObjectType, GraphQLList, GraphQLString, GraphQLFloat } from 'graphql';
 import Payment from './PaymentType';
+import Comment from './CommentType';
 
 const Invoice = new GraphQLObjectType({
   name: 'Invoice',
@@ -11,7 +12,8 @@ const Invoice = new GraphQLObjectType({
     due_at: {type: GraphQLString},
     customer: {type: GraphQLString},
     created_at: {type: GraphQLString},
-    payment: {type: Payment}
+    payment: {type: Payment},
+    comments: {type: new GraphQLList(Comment)}
   }
 });
 
