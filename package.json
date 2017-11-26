@@ -16,7 +16,10 @@
     "graphql": "^0.8.2",
     "micro": "^6.2.0",
     "micro-compress": "^1.0.0",
-    "micro-cors": "^0.0.4"
+    "micro-cors": "^0.0.4",
+    "pg": "^7.4.0",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.23.1"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",
