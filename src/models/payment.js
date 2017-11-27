@@ -10,15 +10,13 @@ module.exports = (sequelize, DataTypes) => {
     method: DataTypes.STRING,
     walletName: DataTypes.STRING,
     walletId: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        Payment.belongsTo(models.Invoice, {
-          foreignKey: 'invoiceId',
-          onDelete: 'CASCADE',
-        });
-      }
-    }
   });
+  Payment.associate = function(models) {
+    Payment.belongsTo(models.Invoice, {
+      foreignKey: 'invoiceId',
+      onDelete: 'CASCADE',
+    });
+   }
+  
   return Payment;
 };

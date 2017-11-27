@@ -9,14 +9,14 @@ module.exports = (sequelize, DataTypes) => {
     status: DataTypes.STRING,
     dueAt: DataTypes.DATE,
     customer: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        Invoice.hasOne(models.Payment, {
-          foreignKey: 'invoiceId'
-        });
-      }
-    }
   });
+
+  Invoice.associate = function(models) {
+    Invoice.hasOne(models.Payment, {
+      foreignKey: 'invoiceId',
+      as: 'payment',
+    });
+  }
+
   return Invoice;
 };
