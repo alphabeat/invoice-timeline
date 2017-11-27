@@ -40,6 +40,7 @@
   invoice_timeline=$ INSERT INTO "Invoices" (reference, amount, status, "dueAt", customer, "createdAt", "updatedAt") VALUES ('56723', 8675.0, 'due', NOW(), 'Aircall',  NOW(), NOW());
   invoice_timeline=$ INSERT INTO "Invoices" (reference, amount, status, "dueAt", customer, "createdAt", "updatedAt") VALUES ('56724', 5289.0, 'due', NOW(), 'Forest',  NOW(), NOW());
   invoice_timeline=$ INSERT INTO "Payments" (reference,"paidAt",method,"walletName","walletId","createdAt","updatedAt","invoiceId") VALUES('123548',NOW(),'WireTransfer','Wallet Euro','3345c835-d684-4b42-957b-6c8f7f765d4b',NOW(),NOW(),1);
+  invoice_timeline=$ ALTER TABLE "Invoices" SET "paymentId"=1 WHERE id=1;
   ```
 
 + Start the microservice
@@ -58,6 +59,8 @@
 + To show/edit the Front-End code :
 
   https://stackblitz.com/edit/invoice-timeline
+
+  (Click on "Open in new window" in the top-right of the page for better experience)
 
 ### License
 MIT
